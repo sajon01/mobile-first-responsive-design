@@ -8,6 +8,10 @@ body{
     height: 100vh;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* header section */
 
 .header{
@@ -17,10 +21,6 @@ body{
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
-}
-
-.header .menubar {
-    
 }
 
 .header .menubar .logo{
@@ -50,7 +50,7 @@ body{
 
 .header .btn{
     position: fixed;
-    top: 2%;
+    top: 1%;
     right: 2%;
     z-index: 10;
 }
@@ -191,6 +191,7 @@ body{
     cursor: pointer;
     margin-bottom: 3em;
     animation: moveup 1s ease-in-out both;
+    animation-delay: .5s;
 }
 
 .hero-area button:hover{
@@ -198,6 +199,21 @@ body{
     transition: .5s;
 }
 
+.more{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6em;
+    animation: moveup 1s ease-in-out both;
+    animation-delay: 1s;
+}
+
+.more p{
+    color: #ffffffd6;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
 
 /* second section */
 
@@ -419,4 +435,223 @@ body{
 .footer-section p{
     color: #ffffff6a;
     font-size: 15px;
+}
+
+
+/* responsiveness */
+
+@media (min-width: 760px){
+    /* header section */
+
+.header .btn{
+    display: none;
+}
+
+.header .menu-links{
+    background-color: #21b2a600;
+    top: 3%;
+    right: 2%;
+}
+
+.header .menu-links a{
+    text-transform: uppercase;
+    padding: 0 .6em;
+}
+
+
+
+
+/* hero area */
+
+.hero-area{
+    padding: 3em 5em;
+}
+
+.hero-area h2{
+    margin-top: 4em;
+}
+
+.hero-area p{
+    padding: 3em 0;
+}
+
+.hero-area button{
+    margin-bottom: 4em;
+}
+
+.hero-area button:hover{
+    background-color: #ef7666;
+    transition: .5s;
+}
+
+/* second section */
+
+.second-section{
+    padding: 5% 15%;
+}
+
+.second-section h2{
+    font-size: 1.4em;
+}
+
+.second-section p{
+    font-size: 1em;
+}
+
+.second-section .icons div{
+    margin: 2em;
+}
+
+
+/* image section */
+
+.image-section .text-img-container .box{
+
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.088);
+
+    .text{
+
+        & h3{
+            font-size: 1.1em;
+        }
+
+        & p{
+            font-size: 1em;
+        }
+    }
+}
+
+.second img{
+    order: 2;
+}
+
+/* service section start here */
+
+.service-section .top{
+    width: 70%;
+    margin: auto;
+}
+
+.service-section .top h3{
+    font-size: 1.1em;
+}
+
+.service-section .top p{
+    font-size: 1em;
+}
+
+.service-section .bottom{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2em auto;
+}
+
+.service-section .single-service:nth-child(1){
+    background-color: rgba(0, 0, 0, 0.035);
+}
+
+.service-section .single-service:nth-child(2){
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+.service-section .single-service:nth-child(3){
+    background-color: rgba(0, 0, 0, 0.105);
+}
+.service-section .single-service:nth-child(4){
+    background-color: rgba(0, 0, 0, 0.14);
+}
+.service-section .single-service:nth-child(5){
+    background-color: rgba(0, 0, 0, 0.175);
+}
+.service-section .single-service:nth-child(6){
+    background-color: rgba(0, 0, 0, 0.21);
+}
+.service-section .single-service{
+    border-bottom: none;
+    text-align: left;
+    padding: 4em 6em;
+    position: relative;
+}
+
+.service-section .single-service h4{
+    font-size: 1.1em;
+}
+
+.service-section .single-service p{
+    font-size: 1em;
+}
+
+.service-section .single-service img{
+    width: 2.5em;
+    position: absolute;
+    top: 22%;
+    left: 7%;
+}
+
+.service-section .single-service:last-child{
+    border-bottom: none;
+}
+
+
+/* activate section */
+
+.activate-section{
+    width: 100%;
+    padding: 3em 0;
+    display: flex;
+    padding: 3em 4em;
+}
+
+.activate-section .text{
+    width: 50%;
+    text-align: left;
+
+    & h3{
+        font-size: 1.1em;
+    }
+
+    & p{
+        font-size: 1em;
+    }
+}
+
+
+.activate-section .buttons{
+    width: 50%;
+}
+
+.activate-section .buttons buttons{
+    font-size: 1em;
+}
+
+}
+
+@media (min-width: 1000px){
+
+    .hero-area p{
+        padding: 3em 6em;
+    }
+
+    .image-section .text-img-container .box{
+        & img{
+            width: 80%;
+        }
+}
+}
+
+@media (min-width: 1200px){
+
+    .hero-area p{
+        padding: 3em 10em;
+    }
+
+    .image-section .text-img-container .box{
+        & img{
+            width: 75%;
+        }
+}
+
 }
