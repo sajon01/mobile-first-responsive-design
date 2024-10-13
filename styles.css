@@ -19,10 +19,16 @@ body{
     background-attachment: fixed;
 }
 
+.header .menubar {
+    
+}
+
 .header .menubar .logo{
+    z-index: 7;
+    position: absolute;
+    width: 100%;
     background-color: #2e3842;
     padding: .7em;
-    display: none;
     & h2{
         color: #fff;
     }
@@ -30,7 +36,7 @@ body{
 }
 
 .header .overly{
-    background-color: rgba(0, 0, 0, 0.54);
+    background-color: rgba(0, 0, 0, 0.573);
     position: absolute;
     top: 0;
     right: 0;
@@ -43,15 +49,10 @@ body{
 }
 
 .header .btn{
-    position: absolute;
-    top: 4%;
-    right: 1%;
+    position: fixed;
+    top: 2%;
+    right: 2%;
     z-index: 10;
-}
-
-.header .menubar .logo{
-    z-index: 7;
-    position: relative;
 }
 
 .header .menu-links{
@@ -69,13 +70,13 @@ body{
 
 #nav-toggle:checked ~ .menubar .menu-links{
     display: 100%;
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     top: 0%;
     right: 0%;
     width: 16em;
-    height: 100vh;
+    height: 100%;
     padding: 3em 1em;
     transition: .8s;
     transition-timing-function: ease;
@@ -138,6 +139,18 @@ body{
 
 }
 
+
+@keyframes moveup {
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
 @keyframes hr-anim-bottom {
     0%{
         transform: scaleX(1);
@@ -164,6 +177,7 @@ body{
     font-size: 15px;
     line-height: 1.7rem;
     letter-spacing: .2em;
+    animation: moveup 1s ease-in-out both;
 }
 
 .hero-area button{
@@ -176,6 +190,7 @@ body{
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 3em;
+    animation: moveup 1s ease-in-out both;
 }
 
 .hero-area button:hover{
@@ -318,6 +333,7 @@ body{
     background-size: cover;
     background-position: center;
     padding-bottom: 2em;
+    background-attachment: fixed;
 }
 
 .activate-section .text{
